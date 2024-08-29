@@ -1,0 +1,653 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Be Vietnam Pro" , sans-serif;
+}
+
+#wrapper{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: black;
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 1rem;
+}
+
+.logo{
+    width: 100px;
+}
+
+.logo-container{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+}
+
+.logo-text{
+    color: white;
+    margin-left: -1.6rem;
+    font-size: 28px;
+}
+
+.nav-items{
+    display: flex;
+    gap: 2rem;
+    padding: 0 4rem;
+}
+.nav-items div{
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.nav-items div a {
+    transition: 0.8s color, 0.8s text-shadow; /* Smooth transition for color and shadow */
+    color: white; /* Your initial color here */
+    font-weight: 400; /* Initial font weight */
+    text-shadow: none; /* Initial shadow */
+}
+
+.nav-items div a:hover {
+    color: rgb(255, 134, 134);
+    font-weight: 600; /* Make the text bold */
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3); /* Subtle shadow for smooth visual effect */
+}
+
+
+
+a{
+    text-decoration: none;
+}
+
+
+/* hero section */
+
+.hero-section{
+    width: 75%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5rem;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    padding-bottom: 8rem;
+}
+
+.faded-text{
+    color: rgba(102, 102, 102, 0.34);
+    user-select: none;
+    font-size: 6em;
+
+    bottom: -14.3%;
+    left: -5%;
+    font-weight: bold;
+    transition:  all 3s;
+}
+
+.hero-section-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.hero-section-heading{
+    color: rgb(255, 234, 234);
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.role{
+    color: cyan;
+    font-weight: 800;
+}
+
+.hero-section-sub-heading{
+    color: rgb(255, 234, 234);
+    font-size: 45px;
+    line-height: 45px;
+}
+
+.hero-section-description{
+    color: rgb(255, 234, 234);
+    margin-top: 1rem;
+    width: 70%;
+    font-weight: 500;
+}
+
+.btn-pink{
+    color: rgb(255, 234, 234);
+    background-color: rgb(255, 132, 0);
+    width: fit-content;
+    padding: 0.8rem 2.3rem;
+    box-shadow: 5px 5px 7px 8px #0000003f;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-weight: 500;
+    border: solid 3px transparent;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-pink::before{
+    transform: scaleX(1);
+}
+
+.btn-pink:hover{
+    border: solid 3px rgb(255, 132, 0);
+    color: black;
+}
+
+.hero-section-right{
+    position: relative;
+
+}
+
+.absolute{
+    position: absolute;
+}
+
+.user-image{
+    background-color: rgba(55, 55, 55, 0.496);
+    padding: 2.5rem;
+    filter: grayscale(1);
+    transition: all 1s;
+    animation: scaleImage 5s linear infinite;
+}
+
+.user-image img{
+    z-index: -9;
+    width: 20rem;
+    height: 25rem;
+}
+
+@keyframes scaleImage{
+    0%{
+        filter: grayscale(0);
+        transform: scale(1);
+    }
+    50%{
+        filter: grayscale(1);
+        transform: scale(1.1);
+        box-shadow: rgba(181, 181, 181, 0.25) 0px 50px 100px -20px, rgba(177, 177, 177, 0.3) 0px 30px 60px -30px, rgba(85, 85, 85, 0.35) 0px -2px 6px 0px inset;
+    }
+    100%{
+        transform: scale(1);
+        filter: grayscale(0);
+    }
+}
+
+.icon-circle {
+    z-index: 9;
+    top: -2em;
+    right: 1em;
+    animation-name: circleRotate;
+    animation-duration: 3s; /* Corrected the space issue */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.icon-circle img {
+    width: 3rem;
+    height: 3rem;
+}
+
+@keyframes circleRotate {
+    0% {
+        transform: rotateY(0deg) translateY(0px);
+    }
+    50% {
+        transform: rotateY(180deg) translateY(-12px);
+    }
+    100% {
+        transform: rotateY(360deg) translateY(0px);
+    }
+}
+.icon-pinkheart{
+    z-index: 9;
+    bottom: -1rem;
+    right: 0;
+    animation-name: whiteheartAnimation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes whiteheartAnimation{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.icon-pinkheart img{
+    width: 7rem;
+    height: 7rem;
+}
+/* PROJECT SECTION */
+.project-section{
+    background-color:rgba(102, 102, 102, 0.34);
+    margin-top: 4rem;
+}
+
+.page-header{
+    color: rgb(255, 134, 134);
+    font-size: 75px;
+    text-align: center;
+    padding: 30px;
+}
+
+.project-container{
+    width: 80%;
+    margin:0 auto;
+    padding: 3rem 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+
+.project-card{
+    width: 90%;
+    height: 550px;
+    background-image: url(./images/projects/2amThoughts.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    box-shadow: 0px 0px 40px rgba(170, 170, 170, 0.349);
+}
+
+.project-card::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 0;
+    /* transform: scaleX(1); */
+}
+
+.project-card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(58, 21, 21, 0.3);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.4s;
+    z-index: 1;
+}
+.project-card:hover .project-content{
+    transform: scale(1.05);
+}
+.project-card:hover .project-time{
+    display: block;
+}
+.project-card:hover::before{
+    transform: scaleX(1);
+}
+
+.project-time{
+    color: white;
+    position: absolute;
+    font-size: 35px;
+    font-weight: 900;
+    z-index: 10;
+    display: none;
+}
+
+.project-time-right{
+    right: -30px;
+    top:-20px;
+}
+
+.project-time-left{
+    left: -30px;
+    top:-20px;
+}
+
+.project-content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 2em;
+    bottom: 20%;
+    z-index: 5;
+    gap: 1em;
+    transition: all 0.4s;
+}
+
+.project-content-left{
+    left:10%;
+}
+
+.project-content-right{
+    left: 250px;
+}
+
+.project-skills-container{
+    width: 60%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.project-skill{
+    width: 40px;
+}
+
+.project-heading{
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 3rem;
+}
+
+.project-subheading{
+    width: 70%;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.btn-group{
+    display: flex;
+    gap: 15px;
+}
+
+.icon{
+    cursor: pointer;
+    color: white;
+    font-size: 35px;
+    transition: all 0.4s;
+}
+
+.icon:hover{
+    color: rgb(200, 0, 74);
+}
+
+#project1{
+    background-image: url(./images/projects/2amThoughts.png);
+}
+#project2{
+    margin-left: 120px;
+    background-image: url(./images/projects/happyHarvest.png);
+}
+#project3{
+    background-image: url(./images/projects/NetflixClone.png);
+}
+
+/* I will do later  */
+@media (max-width: 1300px){
+
+}
+
+/* SKILL SECTION */
+.skill-container{
+    width: 80%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+    margin: 2rem auto;
+    gap: 30px;
+
+}
+
+.skill-container-top{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-container-bottom{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    background: none;
+
+    position: relative;
+}
+
+.techs{
+    font-weight: bold;
+    font-style: italic;
+}
+.exp-heading{
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.exp-heading:hover{
+    color: #ffd7d7;
+}
+
+.skill-fade-text{
+    color: #262626;
+    font-size: 10em;
+    font-weight: bold;
+    position: absolute;
+    bottom: -6.1%;
+    right: -10%;
+    user-select: none;
+}
+
+.blob-style{
+    opacity: 0.3;
+    position: absolute;
+    width: 20rem;
+    z-index: 1;
+    animation: blobAnimate 3s linear infinite;
+}
+
+@keyframes blobAnimate {
+    0%{
+        top: 0%;
+        left: 10%;
+        transform: scale3d(1);
+    }
+    50%{
+        top: 10%;
+        left: 15%;
+        transform: scale3d(1.1);
+    }
+    100%{
+        top: 0%;
+        left: 10%;
+        transform: scale3d(1);
+    }
+}
+
+.skills-logo{
+    width: 90px;
+    transition:all 0.5s;
+    cursor: pointer;
+    z-index: 2;
+    background: none;
+}
+.github{
+    color: white;
+    font-size: 90px;
+}
+.skills-logo:hover{
+    transform: scale(1.2);
+}
+
+.skill-heading{
+    font-size: 50px;
+    font-weight: bold;
+    color:rgb(255, 134, 134);
+}
+
+.skillheading{
+    margin-bottom: 2rem;
+    margin-top: 10rem;
+}
+
+.caps{
+    font-size: 90px;
+}
+
+.skill-subheading{
+    border: 0.001rem solid rgb(74, 74, 74);
+    color: rgb(202, 202, 202);
+    margin-top: 1rem;
+    width: 80%;
+    text-align: justify;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: rgba(27, 27, 27, 0.666);
+    transition: all 0.2s;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 3px 0px, rgba(255, 255, 255, 0.06) 0px 1px 2px 0px;
+}
+
+.skill-subheading:hover{
+    transform: scale(1.01);
+}
+
+.skill-subheading p{
+    margin: 15px 0;
+
+}
+
+/* Contact */
+.contact-left{
+    flex-basis: 35%;
+    color: white;
+}
+
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left h1{
+    color: rgb(255, 134, 134);
+    font-size: 50px;
+    padding: 0 auto;
+}
+.contact-left p i{
+    color:rgb(255, 134, 134);
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color:rgb(168, 168, 168);
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover{
+    color: rgb(255, 134, 134);
+    transform: translateY(-5px);
+}
+
+.resume-btn{
+    border-radius: 10px;
+    color: white;
+    margin-top: 2rem;
+    padding: 1rem 2.5rem;
+    display: inline-block;
+    background: rgb(255, 134, 134);
+    border: 3px solid rgb(255, 134, 134) ;
+    transition: all 0.3s;
+}
+.resume-btn:hover{
+    background: transparent;
+    color: rgb(255, 134, 134);
+}
+.contact-right form{
+    width: 100%;
+}
+
+form input , form textarea{
+    width: 85%;
+    border: 0;
+    outline: none;
+    background: rgb(69, 69, 69);
+    padding: 15px;
+    margin: 15px 0;
+    color: white;
+    font-size: 14px;
+    border-radius: 6px;
+}
+.contact{
+    background-color: #262626;
+    width: 100%;
+}
+.contact-container{
+    padding-top: 3rem;
+    margin-left: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 7rem;
+}
+
+.submit{
+    margin-left: 0rem;
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.copyright{
+    width: 100%;
+    color: #a5a5a5;
+    text-align: center;
+    padding: 25px 0;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.copyright i{
+    color:rgb(255, 134, 134);
+}
+
+#msg{
+    color: #61b752;
+    margin-top: 0px;
+    display: block;
+}
